@@ -1,0 +1,225 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 8px 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gustologo {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  gap: 1rem;
+}
+
+.userAvatars {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, red 0%, tomato 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+.navbar ul li:hover {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+.navbar ul .active {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+.active {
+  color: tomato;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navbarRight img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+#navbarIcon {
+  position: relative;
+}
+
+#navbarIcon   span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.navbarRight button {
+  width: 130px;
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbarRight button:hover {
+  background-color: rgb(255, 157, 71);
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    height: 50px;
+  }
+
+  .navbar .gustologo {
+    width: 45px;
+    height: auto;
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    border-radius: 50%;
+  }
+
+  .navbarBag {
+    display: none;
+  }
+
+  .navbar .navbarRight {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+}
+
+.mobileVersion {
+  position: absolute;
+  bottom: 0;
+}
+
+.mobileVersion {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 2px solid #f1f1f1;
+  z-index: 1000;
+  display: none;
+  direction: ltr;
+  border-radius: 10px 10px 0 0;
+}
+
+.mobileVersion div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mobileVersion span {
+  font-size: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+.mobileVersion p {
+  font-size: 15px;
+  margin-bottom: 0rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar ul, .navbarRight {
+    display: none;
+  }
+
+  .mobileVersion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+  }
+
+  .userProfile {
+    margin-top: 5px;
+  }
+}
